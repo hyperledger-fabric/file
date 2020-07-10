@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  postgresql:
+    image: hyperledger_explorer_postgresql
+    container_name: hyperledger_explorer_postgresql
+    build:
+      context: ./postgresql
+      args:
+         EXPLORER_BRANCH: 'release-3.5'
+    volumes:
+      - hyperledger_explorer_postgresql_data:/usr/local/pgsql/data
+    ports:
+      - "5432:5432"

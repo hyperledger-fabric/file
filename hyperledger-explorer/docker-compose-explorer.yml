@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+
+  explorer:
+    image: hyperledger_explorer_app
+    container_name: hyperledger_explorer_app
+    build:
+      context: ./app
+      args:
+         EXPLORER_BRANCH: 'release-3.5'
+    expose:
+      - "8092"
+    command: sh -c "/tmp/wait.sh && /opt/explorer/start.sh"
+    volumes:
+      - ./app/config/config.json:/opt/explorer/app/platform/fabric/config.json
+      - ./app/config/connection-profile/:/opt/explorer/app/platform/fabric/connection-profile
+      - ./app/config/crypto-config://tmp/crypto
+      - ./app/bin/:/tmp/bin
+    ports:
+      - "8092:8080"
