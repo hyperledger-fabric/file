@@ -9,18 +9,16 @@
 
 
 ## `Structure of the Project`
-The Marksix project is comprised with 3 type of applications, the betting server, web server, chat application:
-
-  - `hyperledger-explorer`:
-
-     It is a Standalone python application that handle any marksix betting data by default running on port 9001.
+The blocknet project is comprised with 2 type of applications. The `hyperledger-fabric` and `hyperledger-explorer`
 
 
   - `hyperledger-fabric`:
 
-    It is a python flask webserver application that handle any http marksix betting connecxion by default running on port 9002.
+    It is a Hyperledger Fabric blockchain network.
 
-     
+  - `hyperledger-explorer`:
+
+     It is a web application, that shows the blockchain configuration and transactions.
 
 
 ## `Requirement`
