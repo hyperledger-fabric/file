@@ -5,7 +5,7 @@
 
 # `BlockNet`
 
-   Running private blockchain application using Hyperledger Fabric network, it is a pain when it comes to the configuration. Missing some configuration will deny the network to run. The pain of modifying the Hyperledger Fabric organization default setting. The lock into the Hyperledger fabric default two `orgs` and so on. If you are among those people, then welcome to `Blocknet`. A python package that is design to solve the above issues. `blocknet` allow you to generate the Hyperledger Fabric setting for you.
+   Running private blockchain application using Hyperledger Fabric network, it is a pain when it comes to the configuration. Missing some configuration will deny the network to run. The pain of modifying the Hyperledger Fabric organization default setting. The lock into the Hyperledger fabric default two `orgs` and so on. If you are among those people, then welcome to `Blocknet`. `blocknet` is design to solve the above issues, and allow you to generate the Hyperledger Fabric setting.
 
 
 ## `Structure of the Project`
@@ -30,12 +30,16 @@ The blocknet project is comprised with 2 type of applications. The `hyperledger-
 
 - `Software packages`
 
+  The require packages to allow `blocknet` to successfuly install the blockchain network are described below:
+
   | **Packages** | **Version** |
   |:-------------|:--------------------------------|
   | docker       | 18.09.7                         |
   | docker-compose   | 1.24.1                    |
   | python   | 3.5+            |
   | git      | 2.17.1 |
+
+  In case you have issue installing those packages , no worry, `blocknet` can help provided that. After download the `blocknet`, when you execute `blocknet` for the first time, it will install all the missing packages, if thy are not installed.
 
 
 
