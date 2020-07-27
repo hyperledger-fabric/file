@@ -47,13 +47,13 @@ The blocknet project is comprised with 2 type of applications. The `hyperledger-
       Download `blocknet` following the below command.
 
       ```sh
-      ~$ sudo curl -L sudo curl -L "https://raw.githubusercontent.com/eirtdev/shell/master/blocknet" -o /usr/local/bin/blocknet && sudo chmod +x /usr/local/bin/blocknet
+      ~$ sudo curl -L "https://raw.githubusercontent.com/eirtdev/shell/master/blocknet" -o /usr/local/bin/blocknet && sudo chmod +x /usr/local/bin/blocknet
       ```
 
       Now go ahead and run the below command and wait.
 
       ```sh
-      ~$ ./blocknet
+      ~$ blocknet
       ```
 
 ## `How it works`
@@ -69,7 +69,7 @@ To be able to start with blocknet, you can decide to run it using either the con
       ```sh
       ~$ blocknet --init
       ```
-      Once the execute the above command, a  `network.json` file will be created in the current directory
+      Once you execute the above command, a  `network.json` file will be created in the current directory
 
       `network.json file`
 
@@ -130,9 +130,9 @@ To be able to start with blocknet, you can decide to run it using either the con
           |:---------|:------------|-------------|-----------|
           |`first_name`|The first name of the blokchain admin network|`False`|`Nil`|
           |`last_name`| The last name of the blockchain admin network|`False`|`Nil`|
-          |`login_name`|The login name of the blokchain admin network|`False`|`admin`|
-          |`login_password`| The password of the blockchain admin network|`False`|`adminpw`|            
-          |`domain`|The domain name of the blokchain admin network|`False`|`Nil`|
+          |`login_name`|The login name of the blokchain admin network|`True`|`admin`|
+          |`login_password`| The password of the blockchain admin network|`True`|`adminpw`|            
+          |`domain`|The domain name of the blokchain admin network|`True`|`Nil`|
 
         - `channel object`
 
@@ -183,6 +183,9 @@ To be able to start with blocknet, you can decide to run it using either the con
           | `name`   |The Organization name|`True`|`Nil`|
           | `domain`   |The domain name of the organization |`True`|`Nil`|
           | `number_of_peer`   |The total number of the peers to use. minimum should be 2. |`True`|`0`|
+          | `has_chaincode`|Inform the blocknet whether the above chaincode will be installed on this organization |`True`|`Nil`|
+
+          
 
         - `explorer object`
 
@@ -311,3 +314,12 @@ To be able to start with blocknet, you can decide to run it using either the con
       Do you want to install Hyperledger composer? ['YES', 'NO', 'N', 'Y', 'TRUE', 'FALSE']:n
 
       ```
+
+## `Other command line options`
+
+  |**options**|**Description**|
+  |:---------|:---------------|
+  | `--version`   |Display the current blocknet version|
+  |   | |
+
+
